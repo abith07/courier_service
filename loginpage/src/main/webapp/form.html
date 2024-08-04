@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #dae4e8;
+    }
+
+    .forms {
+      margin-left: 350px;
+    }
+
+    .cen {
+      display: flex;
+      justify-content: center;
+    }
+
+    .w {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <main>
+      <div class="cen">
+        <div class="py-5 text-center">
+          <img class="d-block mx-auto mb-4" src="./logo.png" alt="" width="" height="100">
+          <h2>Checkout</h2>
+          <p class="lead">Fill the below form to place the order</p>
+        </div>
+      </div>
+
+      <div class="forms">
+        <div class="col-md-7 col-lg-8">
+          <h4 class="mb-3">Billing address</h4>
+         <form action="FormServlet" method="post" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" name="fn" id="firstName" placeholder="" required>
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" name="ln" id="lastName" placeholder="" required>
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="username" class="form-label">Username</label>
+                <div class="input-group has-validation">
+                  <span class="input-group-text">@</span>
+                  <input type="text" class="form-control" name="un" id="username" placeholder="Username" required>
+                  <div class="invalid-feedback">
+                    Your username is required.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email <span class="text-body-secondary"></span></label>
+                <input type="email" class="form-control" name="em" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address for shipping updates.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" name="add" id="address" placeholder="1234 Main St" required="Must fill this"">
+                <div class="invalid-feedback">
+                  Please enter your shipping address.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
+                <input type="text" class="form-control" name="add1" id="address2" placeholder="Apartment or suite">
+              </div>
+
+              <div class="col-md-5">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" name="con" id="country" required="Must fill this"">
+                  <option value="">Choose...</option>
+                  <option>Afghanistan</option>
+                  <option>Brazil</option>
+                  <option>China</option>
+                  <option>Denmark</option>
+                  <option>Egypt</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                  <option>Hungary</option>
+                  <option>India</option>
+                  <option>Japan</option>
+                  <option>Kuwait</option>
+                  <option>Liberia</option>
+                  <option>Malaysia</option>
+                  <option>New Zealand</option>
+                  <option>Oman</option>
+                  <option>Pakistan</option>
+                  <option>Palestine State</option>
+                  <option>Qatar</option>
+                  <option>Russia</option>
+                  <option>Saudi Arabia</option>
+                  <option>Thailand</option>
+                  <option>United States of America</option>
+                  <option>Vietnam</option>
+                  <option>Yemen</option>
+                  <option>Zimbabwe</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a valid country.
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" name="st" id="state" required="Must fill this"">
+                  <option value="">Choose...</option>
+                  <option>Andhra Pradesh</option>
+                  <option>Arunachal Pradesh</option>
+                  <option>Assam</option>
+                  <option>Bihar</option>
+                  <option>Goa</option>
+                  <option>Gujarat</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                  <option>Maharashtra</option>
+                  <option>Tamil Nadu</option>
+                  <option>Rajasthan</option>
+                  <option>Punjab</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <label for="district" class="form-label">District</label>
+                <select class="form-select" name="dt" id="district" required="Must fill this"">
+                  <option value="">Choose...</option>
+                  <option>Ariyalur</option>
+                  <option>Chennai</option>
+                  <option>Coimbatore</option>
+                  <option>Dindigul</option>
+                  <option>Erode</option>
+                  <option>Madurai</option>
+                  <option>Karur</option>
+                  <option>Namakkal</option>
+                  <option>Thanjavur</option>
+                  <option>Theni</option>
+                  <option>Trichy</option>
+                  <option>Tiruppur</option>
+                  <option>Vellore</option>
+                  <option>Viluppuram</option>
+                  <option>Kanniyakumari</option>
+                  <option>Salem</option>
+                </select>
+              </div>
+
+              <div class="col-md-3">
+                <label for="zip" class="form-label">Pincode</label>
+                <input type="text" class="form-control" name="pn" id="zip" placeholder="" required="Must fill this"">
+                <div class="invalid-feedback">
+                  Zip code required.
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="same-address">
+              <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="save-info">
+              <label class="form-check-label" for="save-info">Save this information for next time</label>
+            </div>
+
+            <hr class="my-4">
+
+            <h4 class="mb-3">Product</h4>
+
+            <div class="col-md-4">
+              <label for="product-info" class="form-label">Product Info</label>
+              <select class="form-select" name="pinf" id="product-info" required="Must fill this"">
+                <option value="">Choose...</option>
+                <option>Fragile</option>
+                <option>Solid</option>
+                <option>Liquified Items</option>
+                <option>Inflammable</option>
+                <option>Heavy Metals</option>
+                <option>Electronics</option>
+              </select>
+            </div>
+
+            <br>
+
+            <div class="col-md-4">
+              <label for="delivery-type" class="form-label">Delivery Type</label>
+              <select class="form-select" name="dtv" id="delivery-type" required="">
+                <option value="">Choose...</option>
+                <option>Normal</option>
+                <option>Fast</option>
+                <option>Super Fast</option>
+              </select>
+            </div>
+
+            <br>
+            <hr class="my-4">
+            <h4 class="mb-3">Payment Methods</h4>
+            <br>
+            <div class="form-check">
+              <input id="credit" name="pm" type="radio" class="form-check-input" checked  required value="">
+              <label class="form-check-label" for="credit">Cash on Receiving Product</label>
+            </div>
+            <br>
+            <div class="form-check">
+              <input id="google-pay" name="pm" type="radio" class="form-check-input" required  value="Google Pay">
+              <label class="form-check-label" for="google-pay">Google Pay</label>
+            </div>
+            <br>
+            <div class="form-check">
+              <input id="debit-card" name="pm" type="radio" class="form-check-input" required value="Debit Card">
+              <label class="form-check-label" for="debit-card">Debit Card</label>
+            </div>
+            <br>
+            <div class="form-check">
+              <input id="credit-card" name="pm" type="radio" class="form-check-input" required value="Credit Card">
+              <label class="form-check-label" for="credit-card">Credit Card</label>
+            </div>
+            <br>
+
+            <button class="w-100 btn btn-primary btn-xl" type="submit">Continue to checkout</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+    <p class="mb-1">© 2003–2023 ABU Courier Service</p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">Privacy</a></li>
+      <li class="list-inline-item"><a href="#">Terms</a></li>
+      <li class="list-inline-item"><a href="#">Support</a></li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
