@@ -1,3 +1,4 @@
+project explanation video :https://www.linkedin.com/feed/update/urn:li:activity:7219041330033766400/
 Courier Service Management System
 Overview
 This project is a Courier Service Management System developed using HTML, CSS, JSP, Servlets, JDBC, and Bootstrap. It provides a platform for users to send and manage couriers efficiently. The system facilitates user registration, login, and allows authenticated users to perform tasks such as placing courier requests, tracking shipments, and managing their profile.
